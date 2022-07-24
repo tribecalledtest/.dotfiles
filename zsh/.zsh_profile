@@ -1,0 +1,13 @@
+export NVM_DIR="$HOME/.nvm"
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
+
+#python
+export PATH="$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:$PATH"
+
+#local
+export PATH="$HOME/.local/bin:$PATH"
+
+VIM="nvim"
+
+bindkey -s ^f "tmux-sessionizer\n"
