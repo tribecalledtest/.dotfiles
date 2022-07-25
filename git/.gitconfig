@@ -2,3 +2,7 @@
 	signingkey = 7741A8FEE403B387
 	email = sanghun89@gmail.com
 	name = Sam Chun
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
