@@ -1,0 +1,3 @@
+[submodule "phpactor"]
+	path = phpactor
+	url = git@github.com:phpactor/phpactor
