@@ -171,16 +171,22 @@ nvim_lsp.rust_analyzer.setup {
     --]]
 }
 
+-- php
+nvim_lsp.phpactor.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+
 -- icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
+vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = true,
     -- This sets the spacing and the prefix, obviously.
     virtual_text = {
-      spacing = 4,
-      prefix = ''
+        spacing = 4,
+        prefix = ''
+        }
     }
-  }
 )
 
 EOF
