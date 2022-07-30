@@ -5,6 +5,8 @@ endif
 set completeopt=menu,menuone,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
+autocmd BufWritePre *.tsx,*.ts,*.jsx EslintFixAll
+
 lua << EOF
 --vim.lsp.set_log_level("debug")
 EOF
@@ -83,6 +85,8 @@ end
 local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
+
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 nvim_lsp.flow.setup {
   on_attach = on_attach,
@@ -173,6 +177,18 @@ nvim_lsp.rust_analyzer.setup {
 
 -- php
 nvim_lsp.phpactor.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+
+-- eslint
+nvim_lsp.eslint.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+
+-- html
+nvim_lsp.html.setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
