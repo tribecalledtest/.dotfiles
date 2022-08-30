@@ -169,11 +169,6 @@ set relativenumber
 set nohlsearch
 set hidden
 set noerrorbells
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
 set nu
 set nowrap
 set noswapfile
@@ -188,3 +183,13 @@ set cmdheight=1
 set updatetime=50
 set shortmess+=c
 
+" Rooter "{{{
+" ---------------------------------------------------------------------
+let g:rooter_patterns = ['=src', '.git', 'Cargo.toml', 'package.json']
+let g:rooter_patterns = ['!.git/worktrees', '!=extras', '!^fixtures', '!build/env.sh', '!target', '!pkg']
+
+let g:rooter_change_directory_for_non_project_files = 'current'
+
+let g:rooter_cd_cmd = 'lcd'
+
+let g:rooter_resolve_links = 1

@@ -30,6 +30,8 @@ if has("nvim")
     Plug 'windwp/nvim-ts-autotag'
     Plug 'rust-lang/rust.vim'
     Plug 'jdhao/better-escape.vim'
+    Plug 'airblade/vim-rooter'
+    Plug 'editorconfig/editorconfig-vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 endif
 

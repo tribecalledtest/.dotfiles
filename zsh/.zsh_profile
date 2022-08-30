@@ -9,5 +9,6 @@ export PATH="$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 VIM="nvim"
+EDITOR="nvim"
 
 bindkey -s ^f "tmux-sessionizer\n"
