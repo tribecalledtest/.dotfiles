@@ -102,3 +102,5 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.zsh_profile
 
+alias vim="nvim"
+
