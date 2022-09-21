@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-STOW_FOLDERS="config,git,local,tmux,yabai,zsh"
+STOW_FOLDERS="config,git,local,tmux,yabai,zsh,bazel"
 DOTFILES=$HOME/.dotfiles
 
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
