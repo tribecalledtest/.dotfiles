@@ -30,4 +30,8 @@ keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
 -- From old
-vim.keymap.set('n', '<leader><CR>', ':so ~/.config/nvim/init.lua<CR>')
+keymap.set('n', '<leader><CR>', ':so ~/.config/nvim/init.lua<CR>')
+-- Advance
+keymap.set('v', 'J', ':m \'>+1<CR>gv=gv')
+keymap.set('v', 'K', ':m \'<-2<CR>gv=gv')
+
