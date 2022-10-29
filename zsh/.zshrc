@@ -103,3 +103,8 @@ source $ZSH/oh-my-zsh.sh
 
 
 bindkey -s ^f "tmux-sessionizer\n"
+
+# pnpm
+export PNPM_HOME="/Users/sangchun/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

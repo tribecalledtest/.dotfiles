@@ -93,8 +93,26 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
-nvim_lsp.tailwindcss.setup {}
-nvim_lsp.eslint.setup{}
+nvim_lsp.tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+nvim_lsp.eslint.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+nvim_lsp.html.setup {
+  cmd = { "vscode-html-language-server", "--stdio" },
+  on_attach = on_attach,
+  capabilities = capabilities,
+  configurationSection = { "html", "css", "javascript" },
+  embeddedLanguages = {
+    css = true,
+    javascript = true
+  },
+  provideFormatter = true,
+  single_file_support = true
+}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
