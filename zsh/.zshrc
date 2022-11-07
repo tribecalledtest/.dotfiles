@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
+alias vim='nvim "+Telescope find_files"'
 bindkey -s ^f "tmux-sessionizer\n"
 
 # pnpm

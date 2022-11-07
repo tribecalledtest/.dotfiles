@@ -26,6 +26,10 @@ telescope.setup {
     }
   },
   extensions = {
+    fzy_native = {
+      override_generic_sorter = false,
+      override_file_sorter = true,
+    },
     file_browser = {
       theme = "dropdown",
       -- disables netrw and use telescope-file-browser in its place
@@ -49,6 +53,7 @@ telescope.setup {
 }
 
 telescope.load_extension("file_browser")
+telescope.load_extension("fzy_native")
 
 vim.keymap.set('n', '<leader>;f',
   function()
@@ -79,7 +84,7 @@ vim.keymap.set("n", "<leader>sf", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
     cwd = telescope_buffer_dir(),
-    respect_gitignore = false,
+    respect_gitignore = true,
     hidden = true,
     grouped = true,
     previewer = false,

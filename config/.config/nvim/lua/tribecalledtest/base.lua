@@ -25,6 +25,7 @@ vim.opt.undodir='~/.vim/undodir'
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
 vim.opt.relativenumber = true
 vim.opt.wrap = false -- No Wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }
