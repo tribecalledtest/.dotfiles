@@ -17,6 +17,4 @@ set("n", "K",  "<Cmd>Lspsaga hover_doc<CR>", opts)
 set("n", "go", "<Cmd>Lspsaga show_line_diagnostics<CR>", opts)
 set("n", "gj", "<Cmd>Lspsaga diagnostic_jump_next<CR>", opts)
 set("n", "gk", "<Cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
-set("n", "<C-u>", "<Cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<CR>", {})
-set("n", "<C-d>", "<Cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<CR>", {})
 
