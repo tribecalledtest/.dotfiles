@@ -33,7 +33,6 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'nvim-telescope/telescope-fzy-native.nvim'
-  use 'nvim-telescope/telescope-dap.nvim'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use 'norcalli/nvim-colorizer.lua'
@@ -55,11 +54,4 @@ packer.startup(function(use)
 
   -- debug
   use 'mfussenegger/nvim-dap'
-  use 'mxsdev/nvim-dap-vscode-js'
-  use 'theHamsta/nvim-dap-virtual-text'
-  use {
-    "microsoft/vscode-js-debug",
-    opt = true,
-    run = "npm install --legacy-peer-deps && npm run compile"
-  }
 end)
