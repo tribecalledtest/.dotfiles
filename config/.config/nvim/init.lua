@@ -2,6 +2,7 @@ require('tribecalledtest.base')
 require('tribecalledtest.highlights')
 require('tribecalledtest.maps')
 require('tribecalledtest.plugins')
+require('tribecalledtest.daps')
 
 local has = function(x)
   return vim.fn.has(x) == 1

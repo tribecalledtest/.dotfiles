@@ -54,4 +54,6 @@ packer.startup(function(use)
 
   -- debug
   use 'mfussenegger/nvim-dap'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'David-Kunz/jester'
 end)
