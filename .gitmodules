@@ -1,9 +1,9 @@
 [submodule "phpactor"]
 	path = phpactor
 	url = git@github.com:phpactor/phpactor
-[submodule "dev/microsoft/vscode-node-debug2"]
-	path = dev/microsoft/vscode-node-debug2
-	url = https://github.com/microsoft/vscode-node-debug2.git
 [submodule "dev/dev/microsoft/vscode-node-debug2"]
 	path = dev/dev/microsoft/vscode-node-debug2
 	url = https://github.com/microsoft/vscode-node-debug2.git
+[submodule "dev/dev/microsoft/vscode-js-debug"]
+	path = dev/dev/microsoft/vscode-js-debug
+	url = git@github.com:microsoft/vscode-js-debug.git

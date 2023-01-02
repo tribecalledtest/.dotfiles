@@ -1,4 +1,15 @@
+local keymap = vim.keymap
+local default_opt = {noremap = true, silent = true}
 local dap = require('dap')
+
+-- hot keys
+keymap.set('n', 'leader>dk', ':lua require("dap").continue()<CR>', default_opt)
+keymap.set('n', '<leader>dl', ':lua require("dap").run_last()<CR>', default_opt)
+keymap.set('n', '<leader>di', ':lua require("dap").step_into()<CR>', default_opt)
+keymap.set('n', '<leader>do', ':lua require("dap").step_out()<CR>', default_opt)
+keymap.set('n', '<leader>dr', ':lua require("dap").repl.open()<CR>', default_opt)
+keymap.set('n', '<leader>db', ':lua require("dap").toggle_breakpoint()<CR>', default_opt)
+keymap.set('n', '<leader>dB', ':lua require("dap").toggle_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', default_opt)
 
 -- UI
 require("nvim-dap-virtual-text").setup {
@@ -19,29 +30,5 @@ require("nvim-dap-virtual-text").setup {
   -- e.g. 80 to position at column 80, see `:h nvim_buf_set_extmark()`
 }
 
--- javascript node
-dap.adapters.node2 = {
-  type = 'executable',
-  command = 'node',
-  args = {os.getenv('HOME') .. '/dev/microsoft/vscode-node-debug2/out/src/nodeDebug.js'},
-}
-dap.configurations.javascript = {
-  {
-    name = 'Launch',
-    type = 'node2',
-    request = 'launch',
-    program = '${file}',
-    cwd = vim.fn.getcwd(),
-    sourceMaps = true,
-    protocol = 'inspector',
-    console = 'integratedTerminal',
-  },
-  {
-    -- For this to work you need to make sure the node process is started with the `--inspect` flag.
-    name = 'Attach to process',
-    type = 'node2',
-    request = 'attach',
-    processId = require'dap.utils'.pick_process,
-  },
-}
+-- node
 

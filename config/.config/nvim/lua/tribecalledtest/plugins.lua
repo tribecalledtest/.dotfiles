@@ -55,5 +55,5 @@ packer.startup(function(use)
   -- debug
   use 'mfussenegger/nvim-dap'
   use 'theHamsta/nvim-dap-virtual-text'
-  use 'David-Kunz/jester'
+  use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
 end)
