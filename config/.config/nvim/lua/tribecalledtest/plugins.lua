@@ -42,6 +42,7 @@ packer.startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
   use 'akinsho/nvim-bufferline.lua'
+  -- language handler 
   -- use 'github/copilot.vim'
 
   use 'lewis6991/gitsigns.nvim'
@@ -53,7 +54,5 @@ packer.startup(function(use)
 
 
   -- debug
-  use 'mfussenegger/nvim-dap'
-  use 'theHamsta/nvim-dap-virtual-text'
-  use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
+  use 'simrat39/rust-tools.nvim'
 end)

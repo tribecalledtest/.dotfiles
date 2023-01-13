@@ -4,11 +4,18 @@ if (not status) then return end
 ts.setup {
   highlight = {
     enable = true,
+    additional_vim_regex_highlighting=false,
     disable = {},
   },
   indent = {
     enable = true,
     disable = {},
+  },
+  auto_install = true,
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    max_file_lines = nil,
   },
   ensure_installed = {
     "tsx",

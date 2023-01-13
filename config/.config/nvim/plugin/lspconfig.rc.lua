@@ -10,6 +10,7 @@ local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then return end
 
 local protocol = require('vim.lsp.protocol')
+local rt = require("rust-tools")
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -118,6 +119,13 @@ nvim_lsp.html.setup {
   provideFormatter = true,
   single_file_support = true
 }
+
+rt.setup({
+  server = {
+    on_attach = on_attach,
+    capabilities = capabilities
+  }
+})
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
