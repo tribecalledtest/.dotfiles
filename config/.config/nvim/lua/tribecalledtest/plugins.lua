@@ -55,4 +55,13 @@ packer.startup(function(use)
 
   -- debug
   use 'simrat39/rust-tools.nvim'
+
+  -- start up
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+      require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+  }
 end)
