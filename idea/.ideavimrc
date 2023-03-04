@@ -1,2 +1,38 @@
 imap jj <Esc>
 set timeoutlen=1000
+
+set multiple-cursors
+
+set clipboard+=unnamed
+
+set ignorecase
+set smartcase
+set scrolloff=3 " 3 lines above/below cursor when scrolling
+
+let mapleader = " "
+
+nmap <leader>so :action NextSplitter<cr>
+nmap <leader>sp :action PrevSplitter<cr>
+
+nmap <leader>ss :action SplitHorizontally<cr>
+nmap <leader>sv :action SplitVertically<cr>
+nmap <leader>sc :action Unsplit<cr>
+nmap <leader>sC :action UnsplitAll<cr>
+nmap <leader>sd :action OpenEditorInOppositeTabGroup<cr>
+
+" nmap <leader>a :action Switcher<cr>
+nmap ,a :action GotoAction<cr>
+
+" Errors
+nmap <leader>x :action GotoNextError<cr>
+nmap <leader>X :action GotoPreviousError<cr>
+
+" Refactorings
+vmap T :action Refactorings.QuickListPopupAction<cr>
+vmap <leader>rm :action ExtractMethod<cr>
+nmap <leader>rr :action RenameElement<cr>
+nmap <leader>rg :action Generate<cr>
+nmap <leader>rI :action OptimizeImports<cr>
+" Inspection
+nmap <leader>rc :action InspectCode<cr>
+
