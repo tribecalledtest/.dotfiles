@@ -108,3 +108,15 @@ bindkey -s ^f "tmux-sessionizer\n"
 export PNPM_HOME="/Users/sangchun/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+# Go
+export GOROOT=/usr/local/go
+
+
+# bun completions
+[ -s "/Users/sangchun/.bun/_bun" ] && source "/Users/sangchun/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
