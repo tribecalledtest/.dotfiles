@@ -165,13 +165,6 @@ vim.diagnostic.config({
   },
 })
 
--- additional filetypes
-vim.filetype.add({
- extension = {
-  templ = "templ",
- },
-})
-
 -- Format current buffer using LSP.
 vim.api.nvim_create_autocmd(
   {

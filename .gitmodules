@@ -7,3 +7,6 @@
 [submodule "dev/dev/microsoft/vscode-js-debug"]
 	path = dev/dev/microsoft/vscode-js-debug
 	url = git@github.com:microsoft/vscode-js-debug.git
+[submodule "local/.local/templ"]
+	path = local/.local/templ
+	url = git@github.com:a-h/templ.git
