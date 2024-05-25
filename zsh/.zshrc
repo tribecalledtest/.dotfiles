@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias vim='nvim "+Telescope find_files"'
+alias vim='nvim'
 bindkey -s ^f "tmux-sessionizer\n"
 
 # pnpm
@@ -140,3 +140,12 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/sangchun/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
