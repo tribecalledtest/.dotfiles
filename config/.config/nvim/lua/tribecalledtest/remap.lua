@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 
 -- I need jj
 vim.keymap.set("i", "jj", "<Esc>")
+-- go to directory do <leader>pf to find file
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -41,4 +42,3 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/config/.config/nvim/lua/tribecalledtest/packer.lua<CR>");
 --vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
-
