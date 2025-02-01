@@ -10,3 +10,6 @@
 [submodule "local/.local/templ"]
 	path = local/.local/templ
 	url = git@github.com:a-h/templ.git
+[submodule "local/.local/vcpkg"]
+	path = local/.local/vcpkg
+	url = git@github.com:microsoft/vcpkg.git
