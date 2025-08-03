@@ -14,3 +14,6 @@ export PATH="$PATH:$HOME/bin"
 VIM="nvim"
 EDITOR="nvim"
 
+export VCPKG_ROOT="$HOME/.dotfiles/local/.local/vcpkg"
+
+source "/Users/sangchun/.dotfiles/local/.local/emsdk/emsdk_env.sh"

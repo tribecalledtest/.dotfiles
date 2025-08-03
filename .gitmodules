@@ -13,3 +13,6 @@
 [submodule "local/.local/vcpkg"]
 	path = local/.local/vcpkg
 	url = git@github.com:microsoft/vcpkg.git
+[submodule "local/.local/emsdk"]
+	path = local/.local/emsdk
+	url = https://github.com/emscripten-core/emsdk.git
