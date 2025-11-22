@@ -15,5 +15,6 @@ VIM="nvim"
 EDITOR="nvim"
 
 export VCPKG_ROOT="$HOME/.dotfiles/local/.local/vcpkg"
+export EMSDK_QUIET=1
 
 source "/Users/sangchun/.dotfiles/local/.local/emsdk/emsdk_env.sh"

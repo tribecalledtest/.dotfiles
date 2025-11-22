@@ -111,12 +111,8 @@ export PATH="$PNPM_HOME:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 # Go
-export GOROOT="/usr/local/go"
-export PATH=$PATH:/usr/local/go/bin   # Adjust the path as per your installation directory
-export GOPROXY=https://proxy.golang.org,direct
-export GOPATH="$HOME/go"  # Replace with your chosen directory
-export PATH=$PATH:$GOPATH/bin
-
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # bun completions
 [ -s "/Users/sangchun/.bun/_bun" ] && source "/Users/sangchun/.bun/_bun"
@@ -149,3 +145,4 @@ path=('/Users/sangchun/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
